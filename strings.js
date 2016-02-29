@@ -8,21 +8,28 @@
 // The output of each of the functions should immediately appear as well.
 
 var button = document.getElementById('btn');
-var input = document.getElementById('input');
+var input = document.getElementById('input')
 
 function reversal() {
-  var outputEl = document.getElementById('reverse');
+  var outputEl = document.getElementById('output');
   var toReverse = input.value.split("").reverse().join("");
-  outputEl.innerHTML = toReverse;
-   
+  outputEl.innerHTML += toReverse;
+  
 };
 
 function alphabits() {
-
+  var alphabetical = input.value.split("").sort().join("");
+  outputEl.innerHTML += alphabetical;
 }
 
 function palindrome() {
-
+  var outputEl = document.getElementById('output')
+  var racecar = input.value.toLowerCase().split("");
+  racecar.forEach(function
+    (char) {
+      console.log(racecar.indexOf(char))
+      })
+  
 }
 
 var testString = "";
@@ -35,4 +42,4 @@ function test() {
   console.log(input.value)
 }
 
-button.addEventListener('click', reversal);
+button.addEventListener('click', palindrome);
