@@ -9,9 +9,13 @@
 
 var button = document.getElementById('btn');
 var input = document.getElementById('input');
-function reversal() {
 
-}
+function reversal() {
+  var outputEl = document.getElementById('reverse');
+  var toReverse = input.value.split("").reverse().join("");
+  outputEl.innerHTML = toReverse;
+   
+};
 
 function alphabits() {
 
@@ -23,12 +27,12 @@ function palindrome() {
 
 var testString = "";
 
-reversal(testString);
-alphabits(testString);
-palindrome(testString);
+// reversal(testString);
+// alphabits(testString);
+// palindrome(testString);
 
 function test() {
   console.log(input.value)
 }
 
-button.addEventListener('click', test)
+button.addEventListener('click', reversal);
