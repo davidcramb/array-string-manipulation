@@ -13,13 +13,13 @@ var outputEl = document.getElementById('output');
 
 function reversal() {
   var toReverse = input.value.split("").reverse().join("");
-  outputEl.innerHTML += toReverse;
+  outputEl.innerHTML += toReverse + "<br>";
   
 };
 
 function alphabits() {
   var alphabetical = input.value.split("").sort().join("");
-  outputEl.innerHTML += alphabetical;
+  outputEl.innerHTML += alphabetical + "<br>";
   };
 
 function palindrome() {
@@ -30,15 +30,13 @@ function palindrome() {
     } else {
       outputEl.innerHTML += "No palindromes here." + "<br>"
     };        
-}
+};
 
 var testString = "";
 
-// reversal(testString);
-// alphabits(testString);
-// palindrome(testString);
-
-
 button.addEventListener('click', function(){
-  
+  testString = input.value;
+  reversal(testString);
+  alphabits(testString);
+  palindrome(testString)
 });
